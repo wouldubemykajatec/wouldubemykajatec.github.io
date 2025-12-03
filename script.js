@@ -17,6 +17,13 @@ const page1 = document.getElementById('page1');
         noBtn.style.top = y + 'px';
         spawnHearts(noBtn);
     });
+    noBtn.addEventListener('click', () => {
+        const x = Math.random() * 250;
+        const y = Math.random() * 200;
+        noBtn.style.left = x + 'px';
+        noBtn.style.top = y + 'px';
+        spawnHearts(noBtn);
+    });
 
     yesBtn.addEventListener('click', () => {
         slideBox.style.top = '20%'; slideBox.style.display = 'block';
@@ -33,4 +40,5 @@ const page1 = document.getElementById('page1');
             document.body.appendChild(heart);
             setTimeout(() => heart.remove(), 1300);
         }
+
     }
